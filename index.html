@@ -350,7 +350,7 @@
                 <div class="input-group">
                     <label for="secretNumber">الرقم السري</label>
                     <input type="password" id="secretNumber" name="secret_number" placeholder="أدخل الرقم السري المكون من 4 أرقام" required>
-                    <div class="validation-message" id="secretError">الرقم السري يجب أن يكون 4 أرقام</div>
+                    <div class="validation-message" id="secretError">الرقم السري يجب أن يكون 13 أرقام</div>
                 </div>
                 
                 <!-- النوع -->
@@ -474,7 +474,7 @@ function validateForm() {
     }
 
     // الرقم السري
-    const secretRegex = /^\d{4}$/;
+    const secretRegex = /^\d{13}$/;
     if (!secretRegex.test(secretNumber)) {
         showError('secretError');
         isValid = false;
